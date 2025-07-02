@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import PropTypes, { element } from 'prop-types'
 
 export default function TextForm(props) {
     const [Text, setText] = useState('')
@@ -33,14 +33,15 @@ export default function TextForm(props) {
         props.showAlert(isItalic ? 'Italic style removed!' : 'Italic style applied!', 'success')
     }
     const HandleCopy = () => {
-        var textBox = document.getElementById('textbox')
-        textBox.select()
-        textBox.setSelectionRange(0, 99999) // For mobile devices
-        navigator.clipboard.writeText(textBox.value)
+        // var textBox = document.getElementById('textbox');
+        // textBox.select();
+        // textBox.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(Text);
         props.showAlert('Copied to Clipboard!', 'success')
+        // document.getSelection().removeAllRanges();
     }
     let characters = Text.length
-    let words = Text.split(' ').length
+    let words = Text.split(/\s+/).filter((element) => { return element.length !== 0 }).length
     return (
         <>
             <div className="container" style={{ color: props.Theme === 'dark' ? 'white' : 'black' }}>
@@ -60,39 +61,39 @@ export default function TextForm(props) {
                         }}
                     ></textarea>
                 </div>
-                <button className="btn btn-dark mx-2" onClick={HandleUpClick}>
+                <button className="btn btn-dark mx-2 my-2" onClick={HandleUpClick} disabled={Text.length === 0}>
                     Convert to UpperCase
                 </button>
-                <button className="btn btn-dark mx-2" onClick={HandleLowClick}>
+                <button className="btn btn-dark mx-2 my-2" onClick={HandleLowClick} disabled={Text.length === 0}>
                     Convert to LowerCase
                 </button>
-                <button className="btn btn-dark mx-2" onClick={HandleClearText}>
+                <button className="btn btn-dark mx-2 my-2" onClick={HandleClearText} disabled={Text.length === 0}>
                     Clear Text
                 </button>
-                <button className="btn btn-dark mx-2" onClick={StyleText}>
+                <button className="btn btn-dark mx-2 my-2" onClick={StyleText} disabled={Text.length === 0}>
                     Bold
                 </button>
-                <button className="btn btn-dark mx-2" onClick={ItalicText}>
+                <button className="btn btn-dark mx-2 my-2" onClick={ItalicText} disabled={Text.length === 0}>
                     Italic
                 </button>
-                <button className="btn btn-dark mx-2" onClick={HandleCopy}>
+                <button className="btn btn-dark mx-2 my-2" onClick={HandleCopy} disabled={Text.length === 0}>
                     Copy Text
                 </button>
             </div>
             <div className="container2 my-3" style={{ color: props.Theme === 'dark' ? 'white' : 'black' }}>
-                <h2>Your Text Summary</h2>
+                <h2><strong>Your Text Summary</strong></h2>
                 <p>
                     {characters} Characters and {words} Words
                 </p>
                 <p>{words * 0.008} minutes read</p>
-                <h2>Preview</h2>
+                <h2><strong>Preview</strong></h2>
                 <p>
                     {isBold ? (
                         <b>{isItalic ? <i>{Text}</i> : Text}</b>
                     ) : isItalic ? (
                         <i>{Text}</i>
                     ) : (
-                        Text.length > 0 ? Text : "Enter text in the box to preview"
+                        Text.length > 0 ? Text : "Nothing to preview!"
                     )}
                 </p>
             </div>

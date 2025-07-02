@@ -41,8 +41,8 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/" element={<TextForm showAlert={showAlert} Heading="Enter Text To Analyze" Rows="8" Theme={Theme} />} />
+            <Route exact path="/about" element={<About theme={Theme} Active={''} DeActive={"active"} />} />
+            <Route exact path="/" element={<TextForm showAlert={showAlert} Heading="Try Caveman TextUtils - Enter Text To Analyze" Rows="8" Theme={Theme} Active={'active'} DeActive={""} />} />
           </Routes>
         </div>
       </Router>
