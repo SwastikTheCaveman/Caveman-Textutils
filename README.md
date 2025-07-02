@@ -1,12 +1,29 @@
-# React + Vite
+# Caveman Text Utilities 🪓
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal and lightweight text utility tool built for quick and focused tasks.  
+This app offers simple operations like upper/lower casing, trimming, character count, and more — wrapped in a distraction-free interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Convert text to UPPERCASE or lowercase
+- Format words into bold and italic
+- Count characters and words in real time
+- Copy cleaned/processed text to clipboard
+- Lightweight and responsive UI
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js** (Vite setup)
+- **Bootstrap**
+
+## 📦 Use Case
+
+This is a practice project to sharpen React skills and component design.  
+Useful for quick edits, blogging, note cleanup, or development previews.
+
+## 📍Live Demo
+
+[🌐 View Website](https://your-deployed-link.com)  
+[📁 GitHub Repo](https://github.com/your-username/caveman-text-utilities)
+
+---
