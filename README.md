@@ -3,7 +3,7 @@
 A minimal and lightweight text utility tool built for quick and focused tasks.  
 This app offers simple operations like upper/lower casing, trimming, character count, and more — wrapped in a distraction-free interface.
 
-[🌐 View Website](https://your-deployed-link.com)
+[🌐 View Website]([https://caveman-textutils.pages.dev/])
 
 ## 🚀 Features
 
