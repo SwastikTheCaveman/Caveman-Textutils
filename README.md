@@ -3,6 +3,8 @@
 A minimal and lightweight text utility tool built for quick and focused tasks.  
 This app offers simple operations like upper/lower casing, trimming, character count, and more — wrapped in a distraction-free interface.
 
+[🌐 View Website](https://your-deployed-link.com)
+
 ## 🚀 Features
 
 - Convert text to UPPERCASE or lowercase
@@ -20,10 +22,5 @@ This app offers simple operations like upper/lower casing, trimming, character c
 
 This is a practice project to sharpen React skills and component design.  
 Useful for quick edits, blogging, note cleanup, or development previews.
-
-## 📍Live Demo
-
-[🌐 View Website](https://your-deployed-link.com)  
-[📁 GitHub Repo](https://github.com/your-username/caveman-text-utilities)
 
 ---
